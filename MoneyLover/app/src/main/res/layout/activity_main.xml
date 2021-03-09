@@ -8,11 +8,13 @@
     tools:context=".views.MainActivity">
 
     <RelativeLayout
+        android:id="@+id/rlContainerForBottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
+            android:id="@+id/idForBottomNavigation"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
