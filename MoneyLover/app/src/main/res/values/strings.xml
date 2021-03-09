@@ -2,4 +2,11 @@
     <string name="app_name">MoneyLover</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="money_lover">Money Lover</string>
+    <string name="new_money_lover">New to money lover</string>
+    <string name="already">already using money lover</string>
+    <string name="plan">Plan wisely with budhets, cut back on extras and start saving for your dreams.</string>
+    <string name="Keep">Keep track of every penny with in-depth reports.</string>
+    <string name="access">Access your wallets on all of your devices with a Money Lover account</string>
+    <string name="Manage">Manage your personal finance and achieve your financial goals</string>
 </resources>
