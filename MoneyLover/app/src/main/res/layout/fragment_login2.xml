@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/sky"
+    tools:context=".views.login_page.LoginFragment2">
+
+    <ImageView
+        android:id="@+id/IvMoneyLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/tabpage2" />
+    <TextView
+        android:id="@+id/tvManage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:gravity="center_horizontal"
+        android:text="@string/access"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+    <Button
+        android:id="@+id/btnMoneyLoverLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@drawable/rectangle_login_button"
+        android:text="@string/new_money_lover"
+        android:textColor="@color/sky"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLoginAlreadyExists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@drawable/rectangle_button2"
+        android:text="@string/already"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
