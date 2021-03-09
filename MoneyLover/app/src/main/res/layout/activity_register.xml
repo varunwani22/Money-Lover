@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".views.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/btnRegisterBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:src="@drawable/ic_back_arrow_black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:text="@string/register"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_26"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnFbLogin"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:drawableStart="@drawable/ic_facebook_app_logo"
+        android:drawablePadding="@dimen/dp_16"
+        android:text="@string/connect_with_facebook"
+        android:textColor="#2793D1" />
+
+
+    <Button
+        android:id="@+id/btnGoogleLogin"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:drawableStart="@drawable/ic_google_icon"
+        android:drawablePadding="@dimen/dp_16"
+        android:text="@string/connect_with_google"
+        android:textColor="#FF0000" />
+
+
+    <Button
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableStart="@drawable/ic_apple_logo_svgrepo_com"
+        android:drawablePadding="@dimen/dp_16"
+        android:text="@string/sign_in_with_apple"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ortext" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            app:boxStrokeColor="#2BB949"
+            app:endIconTint="#2BB949"
+            app:hintTextColor="#2BB949" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            app:boxStrokeColor="#2BB949"
+            app:endIconTint="#2BB949"
+            app:hintTextColor="#2BB949" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#2BB949"
+        android:text="@string/register"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_16"
+        android:text="@string/sign_in"
+        android:textColor="#2BB949"
+        android:textSize="@dimen/sp_18" />
+
+</LinearLayout>

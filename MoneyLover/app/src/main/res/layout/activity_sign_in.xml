@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".views.SignInActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_back_arrow_black"
+        android:id="@+id/btnRegisterBack"
+        android:padding="@dimen/dp_16"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/sign_in"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_26"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <Button
+
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:drawableStart="@drawable/ic_facebook_app_logo"
+        android:drawablePadding="@dimen/dp_16"
+        android:text="@string/connect_with_facebook"
+        android:textColor="#2793D1" />
+
+
+    <Button
+        android:layout_width="@dimen/dp_300"
+        android:textColor="#FF0000"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:drawableStart="@drawable/ic_google_icon"
+        android:drawablePadding="@dimen/dp_16"
+        android:text="@string/connect_with_google"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:layout_width="@dimen/dp_300"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:drawableStart="@drawable/ic_apple_logo_svgrepo_com"
+        android:drawablePadding="@dimen/dp_16"
+        android:text="@string/sign_in_with_apple"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/ortext"
+        android:scaleType="fitCenter"
+        android:layout_height="70dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            app:boxStrokeColor="#2BB949"
+            app:endIconTint="#2BB949"
+            app:hintTextColor="#2BB949" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            app:boxStrokeColor="#2BB949"
+            app:endIconTint="#2BB949"
+            app:hintTextColor="#2BB949" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="@dimen/dp_300"
+        android:textColor="@color/white"
+        android:background="#2BB949"
+        android:layout_gravity="center"
+        android:text="@string/sign_in"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:text="@string/register"
+        android:textSize="@dimen/sp_18"
+        android:textColor="#2BB949"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
