@@ -1,6 +1,7 @@
 package com.example.moneylover.views.login_page
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.moneylover.R
-
+import com.example.moneylover.views.RegisterActivity
+import com.example.moneylover.views.SignInActivity
+import kotlinx.android.synthetic.main.fragment_login2.*
+import kotlinx.android.synthetic.main.fragment_login4.*
 
 
 class LoginFragment4 : Fragment() {
@@ -43,6 +47,12 @@ class LoginFragment4 : Fragment() {
 
 //        mTvData = view.findViewById(R.id.tvData)
 //        mTvData.setText(mParam1)
+        btnMoneyLoverLogin4.setOnClickListener {
+            startActivity(Intent(context, RegisterActivity::class.java))
+        }
+        btnLoginAlreadyExists4.setOnClickListener {
+            startActivity(Intent(context, SignInActivity::class.java))
+        }
     }
 
     override fun onStart() {
