@@ -16,5 +16,7 @@
     <dimen name="dp_500">500dp</dimen>
     <dimen name="dp_400">400dp</dimen>
     <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="sp_16">16_sp</dimen>
 
 </resources>

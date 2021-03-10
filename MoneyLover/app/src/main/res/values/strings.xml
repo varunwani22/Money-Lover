@@ -5,8 +5,19 @@
     <string name="money_lover">Money Lover</string>
     <string name="new_money_lover">New to money lover</string>
     <string name="already">already using money lover</string>
+    <string name="My_wallet">My Wallets</string>
+    <string name="Store">Store</string>
+    <string name="Categories">Categories</string>
     <string name="plan">Plan wisely with budhets, cut back on extras and start saving for your dreams.</string>
     <string name="Keep">Keep track of every penny with in-depth reports.</string>
     <string name="access">Access your wallets on all of your devices with a Money Lover account</string>
     <string name="Manage">Manage your personal finance and achieve your financial goals</string>
+    <string name="travel">Travel Mode</string>
+    <string name="help">Help and Support</string>
+    <string name="Explore">Explore Money Lover</string>
+    <string name="settings">Settings</string>
+    <string name="about">About us</string>
+    <string name="Tools">Tools</string>
+    <string name="Debts">Debts</string>
+
 </resources>
