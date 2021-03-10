@@ -28,7 +28,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/sp_18" />
     <Button
-        android:id="@+id/btnMoneyLoverLogin"
+        android:id="@+id/btnMoneyLoverLogin3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_20"
@@ -40,7 +40,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnLoginAlreadyExists"
+        android:id="@+id/btnLoginAlreadyExists3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_20"

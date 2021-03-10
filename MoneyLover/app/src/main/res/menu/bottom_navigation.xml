@@ -2,23 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigationTransactions"
-        android:icon="@drawable/ic_account_person"
-        android:title="Transactions" />
+        android:icon="@drawable/ic_transaction_wallet_svg"
+        android:title="@string/transactions" />
     <item
         android:id="@+id/navigationReport"
-        android:icon="@drawable/ic_account_person"
-        android:title="Transactions" />
+        android:icon="@drawable/ic_report_svg"
+        android:title="@string/report" />
     <item
         android:id="@+id/navigationAddTransaction"
-        android:icon="@drawable/ic_account_person"
-        android:title="Transactions" />
+        android:icon="@drawable/ic_add_transaction_svg"
+        android:title="@string/add" />
+
     <item
         android:id="@+id/navigationPlanning"
-        android:icon="@drawable/ic_account_person"
-        android:title="Transactions" />
+        android:icon="@drawable/ic_planning_svg"
+        android:title="@string/planning" />
     <item
         android:id="@+id/navigationAccount"
         android:icon="@drawable/ic_account_person"
-        android:title="Transactions" />
-
+        android:title="@string/account" />
 </menu>

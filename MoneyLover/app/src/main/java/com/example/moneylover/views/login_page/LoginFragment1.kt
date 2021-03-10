@@ -1,6 +1,7 @@
 package com.example.moneylover.views.login_page
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.moneylover.R
+import com.example.moneylover.views.RegisterActivity
+import com.example.moneylover.views.SignInActivity
+import kotlinx.android.synthetic.main.fragment_login1.*
 
 
 class LoginFragment1 : Fragment() {
@@ -39,6 +43,13 @@ class LoginFragment1 : Fragment() {
         savedInstanceState: Bundle?
     ) {
         super.onViewCreated(view, savedInstanceState)
+        btnMoneyLoverLogin1.setOnClickListener {
+            startActivity(Intent(context,RegisterActivity::class.java))
+        }
+        btnLoginAlreadyExists1.setOnClickListener {
+            startActivity(Intent(context,SignInActivity::class.java))
+        }
+
 
     }
 

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698603706809",
+    "project_id": "money-lover-995c6",
+    "storage_bucket": "money-lover-995c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698603706809:android:12e061ca731e535a193e68",
+        "android_client_info": {
+          "package_name": "com.example.moneylover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698603706809-ipnfgn7duf9aoq2camhm97lvlqkmn1l1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBowZNmRKb2NjnNDxsh0gZ68QRtH3z9YQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698603706809-ipnfgn7duf9aoq2camhm97lvlqkmn1l1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
