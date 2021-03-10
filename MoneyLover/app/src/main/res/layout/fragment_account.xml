@@ -37,19 +37,18 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     android:layout_height="wrap_content"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvSignOut"
-                    android:clickable="true"
-                    android:text="@string/sign_out"
-                    android:textColor="#FF0000"
-                    android:layout_margin="@dimen/dp_10"
-                    android:textSize="18sp"
-                    android:fontFamily="cursive"
+                <Button
+                    android:id="@+id/btnSignOut"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:textColor="@color/theme_green"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_height="wrap_content"
-                    android:focusable="true" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp10"
+                   android:background="@drawable/rectangle_login_button"
+                    android:text="@string/sign_out" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
