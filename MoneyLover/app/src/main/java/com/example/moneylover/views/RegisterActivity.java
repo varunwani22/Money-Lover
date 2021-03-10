@@ -4,10 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.moneylover.R;
@@ -35,6 +40,12 @@ public class RegisterActivity extends AppCompatActivity {
 
     private static final int GOOGLE_SIGN_REQUEST =112 ;
     FirebaseAuth auth;
+    private EditText email_et;
+    private EditText pass_et;
+    private Button register_btn;
+    private TextView signIn_tv;
+
+    private ProgressDialog progressDialog;
 
 
     @Override
@@ -43,11 +54,72 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         auth=FirebaseAuth.getInstance();
         initializeGoogleLogin();
+        emailAndPasswordLogin();
 
     }
 
+    private void emailAndPasswordLogin() {
+       email_et=findViewById(R.id.etEmail);
+       pass_et=findViewById(R.id.etPassword);
+       register_btn=findViewById(R.id.btnRegister);
+        signIn_tv=findViewById(R.id.tvSignIn);
+        progressDialog=new ProgressDialog(this);
+        register_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               register();
+            }
+        });
+        signIn_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this,SignInActivity.class));
+            }
+        });
+    }
+
+    private void register() {
+        String email=email_et.getText().toString();
+        String password=pass_et.getText().toString();
+        if(TextUtils.isEmpty(email)){
+            email_et.setError("Enter your email");
+            return;
+        }
+        else if(TextUtils.isEmpty(password)){
+            pass_et.setError("Enter your password");
+            return;
+        }
 
 
+        else if(password.length()<4){
+            pass_et.setError("Length should be > 4");
+            return;
+        }
+        else if(!isValidEmail(email)){
+            email_et.setError("invalid email");
+            return;
+        }
+        progressDialog.setMessage("Please wait...");
+        progressDialog.show();
+        progressDialog.setCanceledOnTouchOutside(false);
+        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(RegisterActivity.this,"Successfully registered",Toast.LENGTH_LONG).show();
+                    FirebaseUser user=auth.getCurrentUser();
+                    sendUserData(user);
+                }
+                else{
+                    Toast.makeText(RegisterActivity.this,"Sign up fail!",Toast.LENGTH_LONG).show();
+                }
+                progressDialog.dismiss();
+            }
+        });
+    }
+    private Boolean isValidEmail(CharSequence target){
+        return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
+    }
 
 
     private void initializeGoogleLogin() {
@@ -110,7 +182,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void sendUserData(FirebaseUser user) {
-        Toast.makeText(this, "Login Success\n"+user.getDisplayName(), Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(RegisterActivity.this,SignInActivity.class));
+        if(user.getDisplayName()!=null) {
+            Toast.makeText(this, "Login Success\n" + user.getDisplayName(), Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Login Success\n" +"Kundan Kumar", Toast.LENGTH_SHORT).show();
+        }
+        startActivity(new Intent(RegisterActivity.this,MainActivity.class));
     }
 }

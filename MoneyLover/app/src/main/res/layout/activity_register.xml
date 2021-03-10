@@ -91,6 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+            android:inputType="textPassword"
             app:boxStrokeColor="#2BB949"
             app:endIconTint="#2BB949"
             app:hintTextColor="#2BB949" />
