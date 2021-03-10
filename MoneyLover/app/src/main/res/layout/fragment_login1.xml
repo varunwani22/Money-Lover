@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".views.login_page.LoginFragment1">
+
+
+    <ImageView
+        android:id="@+id/IvMoneyLogo"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
+        android:layout_gravity="center"
+        android:src="@drawable/money_lover_image" />
+
+    <TextView
+        android:id="@+id/tvMoneyLover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center_horizontal"
+        android:text="@string/money_lover"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_25"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvManage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:gravity="center_horizontal"
+        android:text="@string/Manage"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <Button
+        android:id="@+id/btnMoneyLoverLogin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@drawable/rectangle_login_button"
+        android:text="@string/new_money_lover"
+        android:textColor="@color/green"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLoginAlreadyExists1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@drawable/rectangle_button1"
+        android:text="@string/already"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
+

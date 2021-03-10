@@ -2,6 +2,7 @@
     <string name="app_name">MoneyLover</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="transactions">Transactions</string>
     <string name="report">Report</string>
     <string name="planning">Planning</string>
@@ -11,4 +12,19 @@
     <string name="save">SAVE</string>
     <string name="dont_include_this_transaction_in_reports_such_as_overview">Dont include this transaction in reports such as Overview.</string>
     <string name="exclude_from_report">Exclude from report</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="connect_with_facebook">Connect with facebook</string>
+    <string name="connect_with_google">connect with google</string>
+    <string name="sign_in_with_apple">sign in with apple</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="money_lover">Money Lover</string>
+    <string name="new_money_lover">New to money lover</string>
+    <string name="already">already using money lover</string>
+    <string name="plan">Plan wisely with budhets, cut back on extras and start saving for your dreams.</string>
+    <string name="Keep">Keep track of every penny with in-depth reports.</string>
+    <string name="access">Access your wallets on all of your devices with a Money Lover account</string>
+    <string name="Manage">Manage your personal finance and achieve your financial goals</string>
 </resources>
