@@ -12,6 +12,7 @@
         android:id="@+id/navigationAddTransaction"
         android:icon="@drawable/ic_add_transaction_svg"
         android:title="@string/add" />
+
     <item
         android:id="@+id/navigationPlanning"
         android:icon="@drawable/ic_planning_svg"

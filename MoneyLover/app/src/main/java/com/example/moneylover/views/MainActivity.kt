@@ -6,10 +6,12 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.example.moneylover.R
 import com.example.moneylover.views.bottomnavigation.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -23,8 +25,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         fragmentManager = supportFragmentManager
 
         val bottomNavigationView =
-            findViewById<View>(R.id.idForBottomNavigation) as BottomNavigationView
+            findViewById<View>(R.id.bottomNavigation) as BottomNavigationView
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
+
+
 
     }
 
@@ -60,4 +64,5 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
         return true
     }
+
 }
