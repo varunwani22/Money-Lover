@@ -184,8 +184,6 @@ public class RegisterActivity extends AppCompatActivity {
     private void sendUserData(FirebaseUser user) {
         if(user.getDisplayName()!=null) {
             Toast.makeText(this, "Login Success\n" + user.getDisplayName(), Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(this, "Login Success\n" +"Kundan Kumar", Toast.LENGTH_SHORT).show();
         }
         startActivity(new Intent(RegisterActivity.this,MainActivity.class));
     }

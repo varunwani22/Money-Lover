@@ -25,6 +25,8 @@ class LoginActivity: AppCompatActivity(),TabLayout.OnTabSelectedListener {
         setViewPagerAdapter()
     }
 
+
+
     private fun initViews() {
         mViewPager = findViewById(R.id.viewPager)
         tabLayout = findViewById(R.id.tabLayout)
