@@ -6,6 +6,7 @@
     android:elevation="@dimen/dp10">
 
     <RelativeLayout
+        android:paddingBottom="@dimen/dp10"
         android:id="@+id/rlUpdateTransaction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
