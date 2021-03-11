@@ -19,4 +19,5 @@
     <color name="dark_orange">#E35604</color>
     <color name="dark_blue">#2793D1</color>
     <color name="faint_orange">#FF8000</color>
+    <color name="red">#ff0000</color>
 </resources>

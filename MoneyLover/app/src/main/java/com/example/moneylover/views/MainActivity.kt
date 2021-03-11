@@ -6,7 +6,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.example.moneylover.R
 import com.example.moneylover.views.bottomnavigation.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -27,7 +26,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val bottomNavigationView =
             findViewById<View>(R.id.bottomNavigation) as BottomNavigationView
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
-
 
 
     }

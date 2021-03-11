@@ -27,4 +27,11 @@
     <string name="Keep">Keep track of every penny with in-depth reports.</string>
     <string name="access">Access your wallets on all of your devices with a Money Lover account</string>
     <string name="Manage">Manage your personal finance and achieve your financial goals</string>
+    <string name="add_amount">Add Amount</string>
+    <string name="select_category">Select Category</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_wallet">Select Wallet</string>
+    <string name="with">With</string>
+    <string name="select_event">Select Event</string>
+    <string name="reminder">Reminder</string>
 </resources>
