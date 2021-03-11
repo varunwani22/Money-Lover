@@ -101,15 +101,18 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/dp15"
-                            android:layout_marginRight="@dimen/dp15"
-                            android:layout_marginBottom="@dimen/dp15"
-                            android:background="@drawable/ic_question_tag" />
+                        <ImageView
+                            android:id="@+id/ivCategoryEt"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/ic_question_tag" />
+
 
                         <EditText
                             android:id="@+id/etSelectCategory"
@@ -118,7 +121,11 @@
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
                             android:hint="@string/select_category" />
+
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -140,7 +147,8 @@
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
-                            android:clickable="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
                             android:hint="@string/select_date" />
                     </LinearLayout>
 

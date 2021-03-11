@@ -74,6 +74,7 @@
     <string name="notifications_tone">notifications_tone</string>
     <string name="play_sound_notifications">Play sounds for notifications</string>
     <string name="todo">TODO</string>
+    <string name="title_select_category">SELECT CATEGORY</string>
 
 
 </resources>

@@ -1,6 +1,7 @@
 package com.example.moneylover.views.bottomnavigation
 
 import android.app.DatePickerDialog
+import android.app.Dialog
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -12,24 +13,32 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.moneylover.R
 import com.example.moneylover.data.localtransaction.TransactionDatabase
 import com.example.moneylover.data.localtransaction.TransactionEntity
+import com.example.moneylover.databinding.DialogCustomListBinding
+import com.example.moneylover.databinding.FragmentAddTransactionBinding
 import com.example.moneylover.repository.TransactionRepository
 import com.example.moneylover.viewmodels.TransactionViewModel
 import com.example.moneylover.viewmodels.TransactionViewModelFactory
+import com.example.moneylover.views.Constants
 import com.example.moneylover.views.MainActivity
 import com.example.moneylover.views.TransactionApplication
+import com.example.moneylover.views.recyclerviews.CustomListItemAdapter
+import com.example.moneylover.views.recyclerviews.OnCategoryClickListener
 import com.example.moneylover.views.recyclerviews.OnItemClickListener
 import com.example.moneylover.views.recyclerviews.TransactionAdapter
 import kotlinx.android.synthetic.main.fragment_add_transaction.*
 import java.util.*
 
 
-class AddTransactionFragment : Fragment() {
+class AddTransactionFragment : Fragment(),OnCategoryClickListener{
+
 
     private val transactionDao by lazy {
-        val roomDatabase = TransactionDatabase.getDatabase(context!!)
+        val roomDatabase = TransactionDatabase.getDatabase(requireContext())
         roomDatabase.getTransactionDao()
     }
     val repository by lazy {
@@ -37,7 +46,8 @@ class AddTransactionFragment : Fragment() {
     }
 
     private lateinit var viewModel: TransactionViewModel
-
+    private lateinit var mCustomListDialog: Dialog
+//    private lateinit var mBinding: FragmentAddTransactionBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +63,8 @@ class AddTransactionFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_add_transaction, container, false)
+       return inflater.inflate(R.layout.fragment_add_transaction, container, false)
+
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -81,10 +92,18 @@ class AddTransactionFragment : Fragment() {
             }
             dp?.show()
         }
+        etSelectCategory.setOnClickListener {
+            customItemsListDialog(
+                resources.getString(R.string.title_select_category),
+                Constants.categories(),
+                Constants.imageCategory(),
+                Constants.CATEGORY
+            )
+        }
 
         ivSelectFromGallery.setOnClickListener {
             val builder = AlertDialog.Builder(
-                context!!
+                requireContext()
             )
             builder.setTitle("Wait a sec...")
             builder.setMessage("Free is great but Premium s better. \n  \nGo Premium o enjoy unlimited awesome features!")
@@ -93,7 +112,7 @@ class AddTransactionFragment : Fragment() {
         }
         ivClickPicture.setOnClickListener {
             val builder = AlertDialog.Builder(
-                context!!
+                requireContext()
             )
             builder.setTitle("Wait a sec...")
             builder.setMessage("Free is great but Premium s better.\n  \nGo Premium to enjoy unlimited awesome features! ")
@@ -127,6 +146,52 @@ class AddTransactionFragment : Fragment() {
         }
 
     }
+
+    private fun customItemsListDialog(
+        title: String,
+        itemsList: List<String>,
+        imageList: List<Int>,
+        selection: String
+    ) {
+
+        mCustomListDialog = Dialog(requireContext())
+        val binding: DialogCustomListBinding = DialogCustomListBinding.inflate(layoutInflater)
+        mCustomListDialog.setContentView(binding.root)
+
+        binding.tvTitle.text = title
+        binding.rvList.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = CustomListItemAdapter(requireActivity(), itemsList,imageList, selection,this)
+
+        binding.rvList.adapter = adapter
+
+        mCustomListDialog.show()
+
+    }
+
+    override fun selectedListItem(item: String, image: Int, selection: String) {
+        when (selection) {
+
+                Constants.CATEGORY -> {
+                    mCustomListDialog.dismiss()
+                   etSelectCategory.setText(item)
+                    Glide.with(ivCategoryEt.context).load(image).into(ivCategoryEt)
+                }
+
+            }
+    }
+
+//        fun selectedListItem(item: String, image: Int, selection: String) {
+//
+//            when (selection) {
+//
+//                Constants.CATEGORY -> {
+//                    mCustomListDialog.dismiss()
+//                    mBinding.etSelectCategory.setText(item)
+//                }
+//
+//            }
+//        }
+
 
 
 }
