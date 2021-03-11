@@ -54,5 +54,12 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="exclude_from_result">Exclude from report</string>
+    <string name="enable_option_exclude">Enable option Exclude from report in Add Transaction and Edit Transaction.</string>
+    <string name="details_transaction">details_transaction</string>
+    <string name="show_details_transaction">Always show details transa..</string>
+    <string name="notifications_tone">notifications_tone</string>
+    <string name="play_sound_notifications">Play sounds for notifications</string>
+    <string name="todo">TODO</string>
 
 </resources>
