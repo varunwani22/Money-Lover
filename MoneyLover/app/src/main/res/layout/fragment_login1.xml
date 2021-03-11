@@ -6,7 +6,8 @@
     android:background="@color/green"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".views.login_page.LoginFragment1">
+    tools:context=".views.login_page.LoginFragment1"
+   >
 
 
     <ImageView

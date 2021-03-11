@@ -23,10 +23,14 @@
     <string name="money_lover">Money Lover</string>
     <string name="new_money_lover">New to money lover</string>
     <string name="already">already using money lover</string>
+    <string name="My_wallet">My Wallets</string>
+    <string name="Store">Store</string>
+    <string name="Categories">Categories</string>
     <string name="plan">Plan wisely with budhets, cut back on extras and start saving for your dreams.</string>
     <string name="Keep">Keep track of every penny with in-depth reports.</string>
     <string name="access">Access your wallets on all of your devices with a Money Lover account</string>
     <string name="Manage">Manage your personal finance and achieve your financial goals</string>
+
     <string name="add_amount">Add Amount</string>
     <string name="select_category">Select Category</string>
     <string name="select_date">Select Date</string>
@@ -38,4 +42,38 @@
     <string name="inflow">Inflow</string>
     <string name="outflow">Outflow</string>
     <string name="view_report_for_this_period">View report for this period</string>
+
+    <string name="travel">Travel Mode</string>
+    <string name="help">Help and Support</string>
+    <string name="Explore">Explore Money Lover</string>
+    <string name="settings">Settings</string>
+    <string name="about">About us</string>
+    <string name="Tools">Tools</string>
+    <string name="Debts">Debts</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="exclude_from_result">Exclude from report</string>
+    <string name="enable_option_exclude">Enable option Exclude from report in Add Transaction and Edit Transaction.</string>
+    <string name="details_transaction">details_transaction</string>
+    <string name="show_details_transaction">Always show details transa..</string>
+    <string name="notifications_tone">notifications_tone</string>
+    <string name="play_sound_notifications">Play sounds for notifications</string>
+    <string name="todo">TODO</string>
+
+
 </resources>
