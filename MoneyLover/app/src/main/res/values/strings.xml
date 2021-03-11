@@ -34,4 +34,8 @@
     <string name="with">With</string>
     <string name="select_event">Select Event</string>
     <string name="reminder">Reminder</string>
+    <string name="cash">Cash</string>
+    <string name="inflow">Inflow</string>
+    <string name="outflow">Outflow</string>
+    <string name="view_report_for_this_period">View report for this period</string>
 </resources>

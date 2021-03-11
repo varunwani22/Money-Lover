@@ -154,7 +154,7 @@
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
-                            android:background="@drawable/ic_transaction_wallet_svg" />
+                            android:background="@drawable/ic_wallet_svg" />
 
                         <EditText
                             android:layout_width="match_parent"
@@ -342,16 +342,13 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="50sp"/>
+                android:textSize="50sp" />
 
         </LinearLayout>
 
     </ScrollView>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
