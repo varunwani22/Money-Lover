@@ -30,6 +30,19 @@
     <string name="Keep">Keep track of every penny with in-depth reports.</string>
     <string name="access">Access your wallets on all of your devices with a Money Lover account</string>
     <string name="Manage">Manage your personal finance and achieve your financial goals</string>
+
+    <string name="add_amount">Add Amount</string>
+    <string name="select_category">Select Category</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_wallet">Select Wallet</string>
+    <string name="with">With</string>
+    <string name="select_event">Select Event</string>
+    <string name="reminder">Reminder</string>
+    <string name="cash">Cash</string>
+    <string name="inflow">Inflow</string>
+    <string name="outflow">Outflow</string>
+    <string name="view_report_for_this_period">View report for this period</string>
+
     <string name="travel">Travel Mode</string>
     <string name="help">Help and Support</string>
     <string name="Explore">Explore Money Lover</string>
@@ -61,5 +74,6 @@
     <string name="notifications_tone">notifications_tone</string>
     <string name="play_sound_notifications">Play sounds for notifications</string>
     <string name="todo">TODO</string>
+
 
 </resources>

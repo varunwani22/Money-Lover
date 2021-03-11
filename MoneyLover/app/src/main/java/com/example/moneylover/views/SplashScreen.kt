@@ -7,6 +7,7 @@ import android.os.Handler
 import android.view.WindowManager
 import com.example.moneylover.R
 import com.example.moneylover.views.login_page.LoginActivity
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
