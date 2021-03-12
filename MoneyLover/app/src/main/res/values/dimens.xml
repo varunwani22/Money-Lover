@@ -33,5 +33,10 @@
     <dimen name="sp_16">16sp</dimen>
     <dimen name="sp_30">30sp</dimen>
     <dimen name="dp60">60dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_12">5dp</dimen>
+
+
 
 </resources>
