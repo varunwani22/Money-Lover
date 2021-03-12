@@ -296,7 +296,13 @@
                     android:text="@string/about"
                     android:textColor="@color/black"
                     android:textSize="@dimen/sp_16" />
+
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="100sp" />
+
 
         </LinearLayout>
     </ScrollView>
