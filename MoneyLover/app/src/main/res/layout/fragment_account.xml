@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".views.bottomnavigation.AccountFragment">
 
+
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,12 +18,39 @@
         app:layout_constraintVertical_bias="0.0">
 
 
-
         <LinearLayout
             android:id="@+id/llMainScroll"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAccount"
+                    android:text="@string/account"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dp_10"
+                    android:textSize="@dimen/sp_30"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btnSignOut"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:textColor="@color/theme_green"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp10"
+                   android:background="@drawable/rectangle_login_button"
+                    android:text="@string/sign_out" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <ImageView
                 android:id="@+id/ivProfilePic"
@@ -39,8 +68,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:textSize="@dimen/sp_18"
-                android:textStyle="bold"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
                 android:layout_marginTop="@dimen/dp_10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +83,6 @@
                 android:layout_marginTop="@dimen/dp_10"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvName" />

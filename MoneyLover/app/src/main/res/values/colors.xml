@@ -10,7 +10,7 @@
     <color name="dark_gray">#8f8f8f</color>
     <color name="yellow">#FFBF00</color>
     <color name="theme_green">#019C00</color>
-    <color name="red">#FF4019</color>
+    <color name="red_orange">#FF4019</color>
     <color name="green">#008A16</color>
     <color name="mint_green">#007012</color>
     <color name="sky">#00B395</color>
@@ -19,4 +19,9 @@
     <color name="dark_orange">#E35604</color>
     <color name="dark_blue">#2793D1</color>
     <color name="faint_orange">#FF8000</color>
+    <color name="red">#ff0000</color>
+    <color name="grey_900">#212121</color>
+
+    <color name="divider_line_color">#e0e0e0</color>
+    <color name="light_gray">#EAEAEA</color>
 </resources>

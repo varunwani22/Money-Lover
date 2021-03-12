@@ -1,0 +1,164 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Display">
+
+        <ListPreference
+            app:defaultValue="normal"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="reply"
+            app:title="Style for money label"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="english"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="languages"
+            app:title="Select language"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="INR"
+            app:entries="@array/currency_entries"
+            app:entryValues="@array/currency_values"
+            app:key="currency"
+            app:title="Currency for Total Wallet"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="13/03/2021"
+            app:entries="@array/dates_entries"
+            app:entryValues="@array/dates_values"
+            app:key="dates"
+            app:title="Select date format"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="Monday"
+            app:entries="@array/days_entries"
+            app:entryValues="@array/days_values"
+            app:key="days"
+            app:title="Set first day of week"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="1st"
+            app:entries="@array/day_month_entries"
+            app:entryValues="@array/day_month_values"
+            app:key="days_month"
+            app:title="Set first day of of the month"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="January"
+            app:entries="@array/months_entries"
+            app:entryValues="@array/months_values"
+            app:key="months"
+            app:title="First month of the year"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="1 month"
+            app:entries="@array/future_period_entries"
+            app:entryValues="@array/future_period_values"
+            app:key="future_period"
+            app:title="Set future period"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat
+            app:key="exclude_report"
+            app:summaryOff="@string/enable_option_exclude"
+            app:summaryOn="@string/enable_option_exclude"
+            app:title="@string/exclude_from_result" />
+        <SwitchPreferenceCompat
+            app:key="@string/details_transaction"
+            app:title="@string/show_details_transaction" />
+        <ListPreference
+            app:defaultValue="Show inflow/outflow"
+            app:entries="@array/overview_mode_entries"
+            app:entryValues="@array/overview_mode_values"
+            app:key="overview_mode"
+            app:title="Overview mode"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Notifications">
+
+        <SwitchPreferenceCompat
+            app:key="@string/notifications_tone"
+            app:summaryOff="@string/play_sound_notifications"
+            app:summaryOn="@string/play_sound_notifications"
+            app:title="Notifications tone" />
+        <ListPreference
+            app:defaultValue="20:00"
+            app:entries="@array/daily_remind_entries"
+            app:entryValues="@array/daily_remind_values"
+            app:key="daily_remind"
+            app:title="Daily remind of adding transaction"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat
+            app:key="show_wallet"
+            app:title="Show wallet on status bar" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="System">
+<!--        <ListPreference-->
+<!--            app:defaultValue="20:00"-->
+<!--            app:entries="@array/daily_remind_entries"-->
+<!--            app:entryValues="@array/daily_remind_values"-->
+<!--            app:key="daily_remind"-->
+<!--            app:title="Daily remind of adding transaction"-->
+<!--            app:useSimpleSummaryProvider="true" />-->
+        <SwitchPreferenceCompat
+            app:key="enable_password"
+            app:title="Enable Password" />
+        <SwitchPreferenceCompat
+            app:key="using_location"
+            app:title="Using location" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Database">
+        <!--        <ListPreference-->
+        <!--            app:defaultValue="20:00"-->
+        <!--            app:entries="@array/daily_remind_entries"-->
+        <!--            app:entryValues="@array/daily_remind_values"-->
+        <!--            app:key="daily_remind"-->
+        <!--            app:title="Daily remind of adding transaction"-->
+        <!--            app:useSimpleSummaryProvider="true" />-->
+        <SwitchPreferenceCompat
+            app:key="auto_sync_wifi"
+            app:summaryOff="Last update: 10 minutes ago"
+            app:summaryOn="updated"
+            app:title="Auto sync over Wi-Fi only" />
+        <SwitchPreferenceCompat
+            app:key="update_exchange_rate"
+            app:summaryOff="less than a minute ago"
+            app:summaryOn="updated"
+            app:title="Switch to update exchange rate" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="About">
+        <!--        <ListPreference-->
+        <!--            app:defaultValue="20:00"-->
+        <!--            app:entries="@array/daily_remind_entries"-->
+        <!--            app:entryValues="@array/daily_remind_values"-->
+        <!--            app:key="daily_remind"-->
+        <!--            app:title="Daily remind of adding transaction"-->
+        <!--            app:useSimpleSummaryProvider="true" />-->
+<!--        <SwitchPreferenceCompat-->
+<!--            app:key="auto_sync_wifi"-->
+<!--            app:summaryOff="Last update: 10 minutes ago"-->
+<!--            app:summaryOn="updated"-->
+<!--            app:title="Auto sync over Wi-Fi only" />-->
+        <Preference
+            app:key="walkthrough"
+            app:title="Walkthrough"/>
+<!--        <SwitchPreferenceCompat-->
+<!--            app:key="update_exchange_rate"-->
+<!--            app:summaryOff="less than a minute ago"-->
+<!--            app:summaryOn="updated"-->
+<!--            app:title="Switch to update exchange rate" />-->
+        <Preference
+            app:key="about_money_lover"
+            app:title="About Money Lover"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

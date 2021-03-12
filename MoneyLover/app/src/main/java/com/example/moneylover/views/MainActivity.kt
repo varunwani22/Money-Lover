@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
 
 
-
     }
 
     private fun loadFragment(navigationFragment: Fragment) {
