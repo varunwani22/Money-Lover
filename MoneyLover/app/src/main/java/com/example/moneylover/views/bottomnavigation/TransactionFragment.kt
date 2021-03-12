@@ -94,6 +94,7 @@ class TransactionFragment : Fragment(), OnItemClickListener {
         intent.putExtra("date", transactionEntity.date)
         intent.putExtra("wallet", transactionEntity.wallet)
         intent.putExtra("with", transactionEntity.with)
+        intent.putExtra("image",transactionEntity.image)
         startActivity(intent)
     }
 

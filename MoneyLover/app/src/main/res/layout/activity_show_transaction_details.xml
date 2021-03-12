@@ -81,12 +81,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="@dimen/dp15"
-                    android:background="@drawable/ic_currency_svg" />
+                <ImageView
+                    android:id="@+id/ivCategoryImageShow"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_question_tag" />
 
                 <TextView
                     android:id="@+id/tvDisplayCategory"

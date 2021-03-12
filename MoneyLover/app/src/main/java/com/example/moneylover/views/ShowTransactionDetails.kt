@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.bumptech.glide.Glide
 import com.example.moneylover.R
 import com.example.moneylover.data.localtransaction.TransactionDatabase
 import com.example.moneylover.data.localtransaction.TransactionEntity
@@ -45,13 +46,6 @@ class ShowTransactionDetails : AppCompatActivity() {
     }
 
     private fun settingData() {
-//        intent.putExtra("id", transactionEntity.id)
-//        intent.putExtra("amount", transactionEntity.amount)
-//        intent.putExtra("cat", transactionEntity.category)
-//        intent.putExtra("note", transactionEntity.note)
-//        intent.putExtra("date", transactionEntity.date)
-//        intent.putExtra("wallet", transactionEntity.wallet)
-//        intent.putExtra("with", transactionEntity.with)
 
 
         val amount = intent.getIntExtra("amount", 0)
@@ -60,6 +54,7 @@ class ShowTransactionDetails : AppCompatActivity() {
         val date = intent.getStringExtra("date")
         val wallet = intent.getStringExtra("wallet")
         val with = intent.getStringExtra("with")
+        Glide.with(ivCategoryImageShow).load(intent.getStringExtra("image")).into(ivCategoryImageShow)
 
         tvDisplayAmount.text = amount.toString()
         tvDisplayCategory.text = category
@@ -76,7 +71,7 @@ class ShowTransactionDetails : AppCompatActivity() {
         }
 
         tvDelete.setOnClickListener {
-            val transactionEntity = TransactionEntity(0, "", "", "", "", "")
+            val transactionEntity = TransactionEntity(0, "", "", "", "", "","")
             transactionEntity.id = id
             viewModel.deleteTransaction(transactionEntity)
 

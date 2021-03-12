@@ -94,7 +94,7 @@ class EditTransactionActivity : AppCompatActivity() {
         }
 
 
-        val transactionEntity = TransactionEntity(0, "", "", "", "", "")
+        val transactionEntity = TransactionEntity(0, "", "", "", "", "","")
 
 
         btnSaveEditedTransaction.setOnClickListener {
