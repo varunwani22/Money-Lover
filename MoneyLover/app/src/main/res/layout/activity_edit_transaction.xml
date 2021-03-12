@@ -189,11 +189,11 @@
                             android:id="@+id/etSelectEditableWallet"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
                             android:hint="@string/select_wallet" />
                     </LinearLayout>
                 </LinearLayout>
@@ -267,6 +267,8 @@
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
                             android:hint="@string/select_event" />
                     </LinearLayout>
 
@@ -289,8 +291,6 @@
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
-                            android:focusable="false"
-                            android:focusableInTouchMode="false"
                             android:hint="@string/reminder" />
                     </LinearLayout>
                 </LinearLayout>
@@ -371,10 +371,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/dont_include_this_transaction_in_reports_such_as_overview" />
-
                     </LinearLayout>
-
-
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

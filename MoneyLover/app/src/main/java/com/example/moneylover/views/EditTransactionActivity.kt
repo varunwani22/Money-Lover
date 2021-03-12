@@ -127,6 +127,16 @@ class EditTransactionActivity : AppCompatActivity(), OnCategoryClickListener {
             alert.show()
         }
 
+        etSelectEditableEvent.setOnClickListener {
+            val builder = AlertDialog.Builder(
+                this
+            )
+            builder.setTitle("Oops...")
+            builder.setMessage("There is no current event!!")
+            val alert: AlertDialog = builder.create()
+            alert.show()
+        }
+
 
         val transactionEntity = TransactionEntity(0, "", "", "", "", "", "")
 

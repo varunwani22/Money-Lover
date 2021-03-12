@@ -49,7 +49,7 @@ import java.util.jar.Manifest
 
 class AddTransactionFragment : Fragment(), OnCategoryClickListener {
 
-   private val REQUEST_CONTACT = 1
+    private val REQUEST_CONTACT = 1
 
     private val transactionDao by lazy {
         val roomDatabase = TransactionDatabase.getDatabase(requireContext())
@@ -146,6 +146,16 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
             alert.show()
         }
 
+        etSelectEvent.setOnClickListener {
+            val builder = AlertDialog.Builder(
+                requireContext()
+            )
+            builder.setTitle("Oops...")
+            builder.setMessage("There is no current event!!")
+            val alert: AlertDialog = builder.create()
+            alert.show()
+        }
+
         etSetReminder.setOnClickListener {
             val time = etSetReminder.text.toString().toInt()
             val intent = Intent(AlarmClock.ACTION_SET_ALARM)
@@ -168,7 +178,8 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
             val image = ivCategoryEt.drawable.toBitmap()
             mImagePath = saveImageToInternalStorage(image)
 
-            val transactionEntity = TransactionEntity(amount, category, date, wallet, note, with, mImagePath)
+            val transactionEntity =
+                TransactionEntity(amount, category, date, wallet, note, with, mImagePath)
 
 
             viewModel.addTransaction(transactionEntity)
@@ -218,7 +229,7 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
         }
     }
 
-//        fun selectedListItem(item: String, image: Int, selection: String) {
+    //        fun selectedListItem(item: String, image: Int, selection: String) {
 //
 //            when (selection) {
 //
@@ -229,38 +240,39 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
 //
 //            }
 //        }
-private fun saveImageToInternalStorage(bitmap: Bitmap): String {
+    private fun saveImageToInternalStorage(bitmap: Bitmap): String {
 
 
-    val wrapper = ContextWrapper(context)
+        val wrapper = ContextWrapper(context)
 
 
-    var file = wrapper.getDir(IMAGE_DIRECTORY, Context.MODE_PRIVATE)
+        var file = wrapper.getDir(IMAGE_DIRECTORY, Context.MODE_PRIVATE)
 
-    // Mention a file name to save the image
-    file = File(file, "${UUID.randomUUID()}.jpg")
+        // Mention a file name to save the image
+        file = File(file, "${UUID.randomUUID()}.jpg")
 
-    try {
-        // Get the file output stream
-        val stream: OutputStream = FileOutputStream(file)
+        try {
+            // Get the file output stream
+            val stream: OutputStream = FileOutputStream(file)
 
-        // Compress bitmap
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+            // Compress bitmap
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
 
-        // Flush the stream
-        stream.flush()
+            // Flush the stream
+            stream.flush()
 
-        // Close stream
-        stream.close()
-    } catch (e: IOException) { // Catch the exception
-        e.printStackTrace()
+            // Close stream
+            stream.close()
+        } catch (e: IOException) { // Catch the exception
+            e.printStackTrace()
+        }
+
+        // Return the saved image absolute path
+        return file.absolutePath
     }
 
-    // Return the saved image absolute path
-    return file.absolutePath
-}
-    companion object{
-        val IMAGE_DIRECTORY="CategoryImage"
+    companion object {
+        val IMAGE_DIRECTORY = "CategoryImage"
     }
 
 
