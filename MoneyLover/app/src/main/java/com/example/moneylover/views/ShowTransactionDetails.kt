@@ -76,7 +76,7 @@ class ShowTransactionDetails : AppCompatActivity() {
         }
 
         tvDelete.setOnClickListener {
-            val transactionEntity = TransactionEntity(0, "", "", "", "", "")
+            val transactionEntity = TransactionEntity(0, "", "", "", "", "","")
             transactionEntity.id = id
             viewModel.deleteTransaction(transactionEntity)
 
