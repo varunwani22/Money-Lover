@@ -74,10 +74,13 @@
     <string name="notifications_tone">notifications_tone</string>
     <string name="play_sound_notifications">Play sounds for notifications</string>
     <string name="todo">TODO</string>
+
     <string name="budget">Budget</string>
     <string name="budget_line">This transaction is not under any budget, but it should be for a better financial management</string>
     <string name="edit_transaction">Edit transaction</string>
     <string name="note">Note</string>
+
+    <string name="title_select_category">SELECT CATEGORY</string>
 
 
 </resources>

@@ -20,4 +20,7 @@
     <color name="dark_blue">#2793D1</color>
     <color name="faint_orange">#FF8000</color>
     <color name="red">#ff0000</color>
+    <color name="grey_900">#212121</color>
+
+    <color name="divider_line_color">#e0e0e0</color>
 </resources>

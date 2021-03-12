@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginTop="@dimen/dp10"
     android:elevation="@dimen/dp10">
 
@@ -22,20 +23,32 @@
             android:text="sds"
             android:textColor="@color/black"
             android:textSize="@dimen/sp20" />
+        <ImageView
+            android:id="@+id/ivCategoryImage"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/tvTransactionDateToDisplay"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_question_tag" />
 
-        <TextView
-            android:id="@+id/tvTransactionCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvTransactionDateToDisplay"
-            android:layout_marginStart="@dimen/dp_20"
-            android:layout_marginTop="@dimen/dp10"
-            android:layout_marginEnd="@dimen/dp10"
-            android:drawableStart="@drawable/ic_camera_svg"
-            android:drawablePadding="@dimen/dp10"
-            android:text="sds"
-            android:textColor="@color/black"
-            android:textSize="@dimen/sp25" />
+
+            <TextView
+                android:id="@+id/tvTransactionCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTransactionDateToDisplay"
+                android:layout_toRightOf="@id/ivCategoryImage"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:text="sds"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp25" />
+
+
+
 
         <TextView
             android:id="@+id/tvTransactionAmount"
