@@ -42,7 +42,7 @@
                 android:layout_below="@+id/tvCash"
                 android:layout_marginStart="@dimen/dp10"
                 android:layout_toEndOf="@+id/ivWallet"
-                android:text="@string/cash"
+                android:text="@string/zero"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp20" />
 
@@ -95,9 +95,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="@dimen/dp10"
+                android:textColor="@color/dark_blue"
                 android:layout_marginTop="@dimen/dp10"
                 android:layout_marginEnd="@dimen/dp10"
-                android:text="@string/inflow"
+                android:text="@string/zero"
                 android:textSize="@dimen/sp20" />
 
             <TextView
@@ -107,9 +108,10 @@
                 android:layout_below="@id/tvInflow"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="@dimen/dp10"
+                android:textColor="@color/red"
                 android:layout_marginTop="@dimen/dp10"
                 android:layout_marginEnd="@dimen/dp10"
-                android:text="@string/inflow"
+                android:text="@string/zero"
                 android:textSize="@dimen/sp20" />
 
             <View
@@ -129,7 +131,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="@dimen/dp10"
                 android:layout_marginEnd="@dimen/dp10"
-                android:text="@string/inflow"
+                android:text="@string/zero"
+                android:textColor="@color/red"
                 android:textSize="@dimen/sp20" />
 
             <TextView
@@ -157,12 +160,14 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/light_gray"
         android:id="@+id/transactionRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="367dp" />
     <ImageView
         android:id="@+id/ivAdvertise"
-        android:layout_width="wrap_content"
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/dp60"/>
 
 

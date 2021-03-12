@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_gray"
     tools:context=".views.bottomnavigation.AddTransactionFragment">
 
     <androidx.cardview.widget.CardView
@@ -288,6 +289,8 @@
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
                             android:hint="@string/reminder" />
                     </LinearLayout>
                 </LinearLayout>

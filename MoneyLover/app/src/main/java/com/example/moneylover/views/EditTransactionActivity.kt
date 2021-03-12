@@ -59,8 +59,15 @@ class EditTransactionActivity : AppCompatActivity() {
                     month,
                     day
                 )
-
             dp.show()
+        }
+
+        etSetEditableReminder.setOnClickListener {
+            val time = etSetEditableReminder.text.toString().toInt()
+            val intent = Intent(AlarmClock.ACTION_SET_ALARM)
+            intent.putExtra(AlarmClock.EXTRA_HOUR, time)
+            intent.putExtra(AlarmClock.EXTRA_MINUTES, 0)
+            startActivity(intent)
         }
 
         ivEditableSelectFromGallery.setOnClickListener {
@@ -85,14 +92,6 @@ class EditTransactionActivity : AppCompatActivity() {
             alert.show()
         }
 
-        etSetEditableReminder.setOnClickListener {
-            val time = etSetReminder.text.toString().toInt()
-            val intent = Intent(AlarmClock.ACTION_SET_ALARM)
-            intent.putExtra(AlarmClock.EXTRA_HOUR, time)
-            intent.putExtra(AlarmClock.EXTRA_MINUTES, 0)
-            startActivity(intent)
-        }
-
 
         val transactionEntity = TransactionEntity(0, "", "", "", "", "","")
 
@@ -112,6 +111,10 @@ class EditTransactionActivity : AppCompatActivity() {
 
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        btnCloseEditTransaction.setOnClickListener {
+            finish()
         }
 
 

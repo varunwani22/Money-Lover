@@ -5,15 +5,19 @@ import android.app.Dialog
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.database.Cursor
 import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
 import android.provider.AlarmClock
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
 import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -39,10 +43,12 @@ import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
 import java.util.*
+import java.util.jar.Manifest
 
 
 class AddTransactionFragment : Fragment(), OnCategoryClickListener {
 
+   private val REQUEST_CONTACT = 1
 
     private val transactionDao by lazy {
         val roomDatabase = TransactionDatabase.getDatabase(requireContext())
@@ -137,7 +143,6 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
             intent.putExtra(AlarmClock.EXTRA_MINUTES, 0)
             startActivity(intent)
         }
-
 
         val viewModelFactory = TransactionViewModelFactory(repository)
         viewModel = ViewModelProviders.of(this, viewModelFactory)
