@@ -23,7 +23,7 @@ class TransactionFragment : Fragment(), OnItemClickListener {
     private lateinit var viewModel: TransactionViewModel
     lateinit var transactionAdapter: TransactionAdapter
     private val transactionDao by lazy {
-        val roomDatabase = TransactionDatabase.getDatabase(context!!)
+        val roomDatabase = TransactionDatabase.getDatabase(requireContext())
         roomDatabase.getTransactionDao()
     }
     val repository by lazy {
@@ -54,7 +54,7 @@ class TransactionFragment : Fragment(), OnItemClickListener {
         viewModel = ViewModelProviders.of(this, viewModelFactory)
             .get(TransactionViewModel::class.java)
 
-        viewModel.getTransaction().observe(this, Observer {
+        viewModel.getTransaction().observe(viewLifecycleOwner, Observer {
             transactionList.clear()
             transactionList.addAll(it)
             transactionAdapter.notifyDataSetChanged()

@@ -2,7 +2,10 @@ package com.example.moneylover.views.bottomnavigation
 
 import android.app.DatePickerDialog
 import android.app.Dialog
+import android.content.Context
+import android.content.ContextWrapper
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
 import android.provider.AlarmClock
@@ -11,6 +14,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,10 +35,14 @@ import com.example.moneylover.views.recyclerviews.OnCategoryClickListener
 import com.example.moneylover.views.recyclerviews.OnItemClickListener
 import com.example.moneylover.views.recyclerviews.TransactionAdapter
 import kotlinx.android.synthetic.main.fragment_add_transaction.*
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.OutputStream
 import java.util.*
 
 
-class AddTransactionFragment : Fragment(),OnCategoryClickListener{
+class AddTransactionFragment : Fragment(), OnCategoryClickListener {
 
 
     private val transactionDao by lazy {
@@ -47,7 +55,9 @@ class AddTransactionFragment : Fragment(),OnCategoryClickListener{
 
     private lateinit var viewModel: TransactionViewModel
     private lateinit var mCustomListDialog: Dialog
-//    private lateinit var mBinding: FragmentAddTransactionBinding
+
+    //    private lateinit var mBinding: FragmentAddTransactionBinding
+    private var mImagePath: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +73,7 @@ class AddTransactionFragment : Fragment(),OnCategoryClickListener{
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       return inflater.inflate(R.layout.fragment_add_transaction, container, false)
+        return inflater.inflate(R.layout.fragment_add_transaction, container, false)
 
     }
 
@@ -137,7 +147,10 @@ class AddTransactionFragment : Fragment(),OnCategoryClickListener{
             val category = etSelectCategory.text.toString()
             val amount = etSelectAmount.text.toString().toInt()
 
-            val transactionEntity = TransactionEntity(amount, category, date, "cash")
+            val image = ivCategoryEt.drawable.toBitmap()
+            mImagePath = saveImageToInternalStorage(image)
+
+            val transactionEntity = TransactionEntity(amount, category, date, "cash", mImagePath)
 
             viewModel.addTransaction(transactionEntity)
 
@@ -160,7 +173,8 @@ class AddTransactionFragment : Fragment(),OnCategoryClickListener{
 
         binding.tvTitle.text = title
         binding.rvList.layoutManager = LinearLayoutManager(requireContext())
-        val adapter = CustomListItemAdapter(requireActivity(), itemsList,imageList, selection,this)
+        val adapter =
+            CustomListItemAdapter(requireActivity(), itemsList, imageList, selection, this)
 
         binding.rvList.adapter = adapter
 
@@ -171,13 +185,13 @@ class AddTransactionFragment : Fragment(),OnCategoryClickListener{
     override fun selectedListItem(item: String, image: Int, selection: String) {
         when (selection) {
 
-                Constants.CATEGORY -> {
-                    mCustomListDialog.dismiss()
-                   etSelectCategory.setText(item)
-                    Glide.with(ivCategoryEt.context).load(image).into(ivCategoryEt)
-                }
-
+            Constants.CATEGORY -> {
+                mCustomListDialog.dismiss()
+                etSelectCategory.setText(item)
+                Glide.with(ivCategoryEt.context).load(image).into(ivCategoryEt)
             }
+
+        }
     }
 
 //        fun selectedListItem(item: String, image: Int, selection: String) {
@@ -191,7 +205,39 @@ class AddTransactionFragment : Fragment(),OnCategoryClickListener{
 //
 //            }
 //        }
+private fun saveImageToInternalStorage(bitmap: Bitmap): String {
 
+
+    val wrapper = ContextWrapper(context)
+
+
+    var file = wrapper.getDir(IMAGE_DIRECTORY, Context.MODE_PRIVATE)
+
+    // Mention a file name to save the image
+    file = File(file, "${UUID.randomUUID()}.jpg")
+
+    try {
+        // Get the file output stream
+        val stream: OutputStream = FileOutputStream(file)
+
+        // Compress bitmap
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+
+        // Flush the stream
+        stream.flush()
+
+        // Close stream
+        stream.close()
+    } catch (e: IOException) { // Catch the exception
+        e.printStackTrace()
+    }
+
+    // Return the saved image absolute path
+    return file.absolutePath
+}
+    companion object{
+        private val IMAGE_DIRECTORY="CategoryImage"
+    }
 
 
 }
