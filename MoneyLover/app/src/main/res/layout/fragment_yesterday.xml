@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.report_fragment.FragmentYesterday">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:text="@string/Balance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/open"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBalance" />
+
+            <TextView
+                android:id="@+id/tvOpenAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:text="2000"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOpen" />
+
+            <TextView
+                android:id="@+id/tvEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_60"
+                android:text="@string/end"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvOpen"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEndAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:text="2000"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvOpenAmount"
+                app:layout_constraintTop_toBottomOf="@+id/tvEnd" />
+
+            <View
+                android:id="@+id/view_FullUnderLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@+id/tvOpenAmount" />
+
+            <TextView
+                android:id="@+id/tvIncomeExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:text="@string/Income"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_FullUnderLine" />
+
+            <TextView
+                android:id="@+id/tvNetIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/net"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIncomeExpense" />
+
+            <TextView
+                android:id="@+id/tvZeroBal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:text="2000"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNetIncome" />
+
+
+            <ImageView
+                android:id="@+id/ivGraph"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_marginTop="@dimen/dp_30"
+                android:scaleType="fitXY"
+                android:src="@drawable/graph"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvZeroBal" />
+
+            <TextView
+                android:id="@+id/tvIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/income"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivGraph" />
+
+            <TextView
+                android:id="@+id/tvZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:text="2000"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIncome" />
+
+            <TextView
+                android:id="@+id/tvExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_12"
+                android:paddingStart="@dimen/dp_10"
+                android:text="@string/Expense"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvIncome"
+                app:layout_constraintTop_toBottomOf="@+id/ivGraph" />
+
+            <TextView
+                android:id="@+id/tvEndBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:text="2000"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvZero"
+                app:layout_constraintTop_toBottomOf="@+id/tvExpense" />
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:layout_marginTop="@dimen/dp_30"
+                android:scaleType="fitXY"
+                android:src="@drawable/round_graph"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEndBalance" />
+
+
+            <View
+                android:id="@+id/view_FullUnderLine2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+
+            <TextView
+                android:id="@+id/tvDebt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/debt"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine2" />
+
+            <TextView
+                android:id="@+id/tvZero1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:text="0"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDebt" />
+
+            <TextView
+                android:id="@+id/tvLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_12"
+                android:paddingStart="@dimen/dp_10"
+                android:text="@string/loan"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvDebt"
+                app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine2" />
+
+            <TextView
+                android:id="@+id/tvZero2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvZero1"
+                app:layout_constraintTop_toBottomOf="@+id/tvLoan" />
+
+            <View
+                android:id="@+id/view_FullUnderLine3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@color/dark_gray"
+                app:layout_constraintTop_toBottomOf="@id/tvZero1" />
+
+            <TextView
+                android:id="@+id/tvOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/other"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_FullUnderLine3" />
+
+            <TextView
+                android:id="@+id/tvZero4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:paddingStart="@dimen/dp_10"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOther" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvZero4"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="50sp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

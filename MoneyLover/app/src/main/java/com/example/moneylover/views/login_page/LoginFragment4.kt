@@ -93,7 +93,7 @@ class LoginFragment4 : Fragment() {
     companion object {
         private const val ARG_PARAM1 = "param1"
         private val TAG = LoginFragment4::class.java.simpleName
-        fun newInstance(param1: String?):LoginFragment4{
+        fun newInstance(param1: String?): LoginFragment4 {
             val fragment = LoginFragment4()
             val args = Bundle()
             args.putString(ARG_PARAM1, param1)
