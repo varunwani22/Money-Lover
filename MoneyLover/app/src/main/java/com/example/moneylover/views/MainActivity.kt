@@ -8,8 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.moneylover.R
 import com.example.moneylover.views.bottomnavigation.*
+import com.example.moneylover.views.planning_fragment.PlanningFragment
+import com.example.moneylover.views.report_fragment.ReportFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
@@ -44,13 +45,15 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 navigationFragment = TransactionFragment()
             }
             R.id.navigationReport -> {
-                navigationFragment = ReportFragment()
+                navigationFragment =
+                    ReportFragment()
             }
             R.id.navigationAddTransaction -> {
                 navigationFragment = AddTransactionFragment()
             }
             R.id.navigationPlanning -> {
-                navigationFragment = PlanningFragment()
+                navigationFragment =
+                    PlanningFragment()
             }
             R.id.navigationAccount -> {
                 navigationFragment = AccountFragment()

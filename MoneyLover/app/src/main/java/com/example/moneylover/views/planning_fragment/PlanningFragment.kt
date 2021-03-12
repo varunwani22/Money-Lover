@@ -1,4 +1,4 @@
-package com.example.moneylover.views.bottomnavigation
+package com.example.moneylover.views.planning_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
