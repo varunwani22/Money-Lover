@@ -39,7 +39,6 @@ class AddTransactionFragment : Fragment() {
     private lateinit var viewModel: TransactionViewModel
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -88,6 +87,7 @@ class AddTransactionFragment : Fragment() {
             )
             builder.setTitle("Wait a sec...")
             builder.setMessage("Free is great but Premium s better. \n  \nGo Premium o enjoy unlimited awesome features!")
+            builder.setPositiveButton("GO PREMIUM", null)
             val alert: AlertDialog = builder.create()
             alert.show()
         }
@@ -97,6 +97,7 @@ class AddTransactionFragment : Fragment() {
             )
             builder.setTitle("Wait a sec...")
             builder.setMessage("Free is great but Premium s better.\n  \nGo Premium to enjoy unlimited awesome features! ")
+            builder.setPositiveButton("GO PREMIUM", null)
             val alert: AlertDialog = builder.create()
             alert.show()
         }
@@ -109,6 +110,7 @@ class AddTransactionFragment : Fragment() {
             startActivity(intent)
         }
 
+
         val viewModelFactory = TransactionViewModelFactory(repository)
         viewModel = ViewModelProviders.of(this, viewModelFactory)
             .get(TransactionViewModel::class.java)
@@ -117,8 +119,11 @@ class AddTransactionFragment : Fragment() {
             val date = etSelectDate.text.toString()
             val category = etSelectCategory.text.toString()
             val amount = etSelectAmount.text.toString().toInt()
+            val wallet = etSelectWallet.text.toString()
+            val note = etSelectNote.text.toString()
+            val with = etPeopleWith.text.toString()
 
-            val transactionEntity = TransactionEntity(amount, category, date, "cash")
+            val transactionEntity = TransactionEntity(amount, category, date, wallet, note, with)
 
             viewModel.addTransaction(transactionEntity)
 

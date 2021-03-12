@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/icon_logo_monney_lover"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyLover">
-        <activity android:name=".views.ShowTransactionDetails"></activity>
+        <activity android:name=".views.EditTransactionActivity"></activity>
+        <activity android:name=".views.ShowTransactionDetails" />
         <activity android:name=".views.WebViewActivity" />
         <activity
             android:name=".views.SettingsActivity"

@@ -16,6 +16,7 @@ import com.example.moneylover.data.localtransaction.TransactionEntity
 import com.example.moneylover.repository.TransactionRepository
 import com.example.moneylover.viewmodels.TransactionViewModel
 import com.example.moneylover.viewmodels.TransactionViewModelFactory
+import com.example.moneylover.views.ShowTransactionDetails
 import com.example.moneylover.views.WebViewActivity
 import com.example.moneylover.views.recyclerviews.OnItemClickListener
 import com.example.moneylover.views.recyclerviews.TransactionAdapter
@@ -58,11 +59,12 @@ class TransactionFragment : Fragment(), OnItemClickListener {
         viewModel = ViewModelProviders.of(this, viewModelFactory)
             .get(TransactionViewModel::class.java)
 
-        viewModel.getTransaction().observe(this, Observer {
+        viewModel.getTransaction().observe(viewLifecycleOwner, Observer {
             transactionList.clear()
             transactionList.addAll(it)
             transactionAdapter.notifyDataSetChanged()
         })
+
 
     }
 
@@ -84,7 +86,15 @@ class TransactionFragment : Fragment(), OnItemClickListener {
     }
 
     override fun onItemClick(transactionEntity: TransactionEntity) {
-
+        val intent = Intent(context, ShowTransactionDetails::class.java)
+        intent.putExtra("id", transactionEntity.id)
+        intent.putExtra("amount", transactionEntity.amount)
+        intent.putExtra("cat", transactionEntity.category)
+        intent.putExtra("note", transactionEntity.note)
+        intent.putExtra("date", transactionEntity.date)
+        intent.putExtra("wallet", transactionEntity.wallet)
+        intent.putExtra("with", transactionEntity.with)
+        startActivity(intent)
     }
 
 }

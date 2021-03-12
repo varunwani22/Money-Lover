@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.bottomnavigation.AddTransactionFragment">
+    tools:context=".views.EditTransactionActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/addTransactionCard"
+        android:id="@+id/EditTransactionCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="@dimen/dp10"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/btnCloseAddTransaction"
+                android:id="@+id/btnCloseEditTransaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -34,13 +34,13 @@
                 android:layout_centerVertical="true"
                 android:layout_margin="@dimen/dp10"
                 android:layout_marginStart="@dimen/dp10"
-                android:layout_toEndOf="@+id/btnCloseAddTransaction"
-                android:text="@string/add_transaction"
+                android:layout_toEndOf="@+id/btnCloseEditTransaction"
+                android:text="@string/edit_transaction"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/btnSaveTransaction"
+                android:id="@+id/btnSaveEditedTransaction"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
@@ -58,7 +58,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTransactionCard">
+        app:layout_constraintTop_toBottomOf="@+id/EditTransactionCard">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                             android:background="@drawable/ic_currency_svg" />
 
                         <EditText
-                            android:id="@+id/etSelectAmount"
+                            android:id="@+id/etSelectEditableAmount"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp15"
@@ -112,7 +112,7 @@
                             android:background="@drawable/ic_question_tag" />
 
                         <EditText
-                            android:id="@+id/etSelectCategory"
+                            android:id="@+id/etSelectEditableCategory"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dp15"
@@ -134,13 +134,13 @@
                             android:background="@drawable/ic_notes_svg" />
 
                         <EditText
-                            android:id="@+id/etSelectNote"
+                            android:id="@+id/etSelectEditableNote"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
-                            android:hint="@string/select_category" />
+                            android:hint="@string/note" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -156,7 +156,7 @@
                             android:background="@drawable/ic_calender_svg" />
 
                         <EditText
-                            android:id="@+id/etSelectDate"
+                            android:id="@+id/etSelectEditableDate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dp15"
@@ -179,7 +179,7 @@
                             android:background="@drawable/ic_wallet_svg" />
 
                         <EditText
-                            android:id="@+id/etSelectWallet"
+                            android:id="@+id/etSelectEditableWallet"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dp15"
@@ -213,7 +213,7 @@
                         android:background="@drawable/ic_people_with" />
 
                     <EditText
-                        android:id="@+id/etPeopleWith"
+                        android:id="@+id/etEditablePeopleWith"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp15"
@@ -252,7 +252,7 @@
                             android:background="@drawable/ic_calender_svg" />
 
                         <EditText
-                            android:id="@+id/etSelectEvent"
+                            android:id="@+id/etSelectEditableEvent"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dp15"
@@ -274,7 +274,7 @@
                             android:background="@drawable/ic_alarm_svg" />
 
                         <EditText
-                            android:id="@+id/etSetReminder"
+                            android:id="@+id/etSetEditableReminder"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dp15"
@@ -305,7 +305,7 @@
                     android:weightSum="2">
 
                     <ImageView
-                        android:id="@+id/ivSelectFromGallery"
+                        android:id="@+id/ivEditableSelectFromGallery"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -313,7 +313,7 @@
                         android:src="@drawable/ic_photo_gallary_svg" />
 
                     <ImageView
-                        android:id="@+id/ivClickPicture"
+                        android:id="@+id/ivEditableClickPicture"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -376,4 +376,5 @@
         </LinearLayout>
 
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
