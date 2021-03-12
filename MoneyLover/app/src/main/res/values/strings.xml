@@ -104,7 +104,13 @@
     <string name="doller">$</string>
 
     <string name="title_select_wallet">SELECT WALLET</string>
-
+    <string name="A_financial">A financial plan to balance your income and expenses</string>
+    <string name="event">Event</string>
+    <string name="create_a">Create a event to track on your spending during an actual event like travelling at weekends</string>
+    <string name="creating_recurring">Create recurring transaction that will be automatically added to future</string>
+    <string name="recurring_transaction">Recurring Transaction</string>
+    <string name="Monitor_your">Monitor your repeatitive bills such electricity,rent Internet subscription etc</string>
+    <string name="bills">Bills</string>
 
 
 </resources>

@@ -52,7 +52,6 @@ class TransactionFragment : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setAds()
         setRecyclerData()
 
         val viewModelFactory = TransactionViewModelFactory(repository)
@@ -64,20 +63,9 @@ class TransactionFragment : Fragment(), OnItemClickListener {
             transactionList.addAll(it)
             transactionAdapter.notifyDataSetChanged()
         })
-
-
     }
 
-    private fun setAds() {
-        Glide.with(ivAdvertise).load("https://media1.giphy.com/media/l1KuejTOGd5aVGN20/giphy.gif")
-            .into(ivAdvertise)
 
-        ivAdvertise.setOnClickListener(View.OnClickListener {
-            val intent = Intent(activity, WebViewActivity::class.java)
-            intent.putExtra("one", "https://www.makemytrip.com/")
-            startActivity(intent)
-        })
-    }
 
     private fun setRecyclerData() {
         transactionAdapter = TransactionAdapter(transactionList, this)
