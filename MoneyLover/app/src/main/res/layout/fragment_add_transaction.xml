@@ -147,7 +147,7 @@
                             android:layout_marginLeft="@dimen/dp15"
                             android:layout_marginRight="@dimen/dp15"
                             android:layout_marginBottom="@dimen/dp15"
-                            android:hint="@string/select_category" />
+                            android:hint="@string/write_note" />
                     </LinearLayout>
 
                     <LinearLayout
