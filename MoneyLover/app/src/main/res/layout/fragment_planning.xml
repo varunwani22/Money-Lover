@@ -1,14 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.planning_fragment.PlanningFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="3" />
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horguideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="42dp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horguideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="109dp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertguideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="30dp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertguideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="378dp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertguideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="45dp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertguideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="104dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planning"
+            android:textColor="#474747"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline1"
+            app:layout_constraintTop_toBottomOf="@id/horguideline1" />
+        <ImageView
+            android:id="@+id/walletIcon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/wallet"
+            app:layout_constraintRight_toRightOf="@id/vertguideline2"
+            app:layout_constraintTop_toBottomOf="@id/horguideline1" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/budget"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline3"
+            app:layout_constraintTop_toBottomOf="@id/horguideline2" />
+        <TextView
+            android:id="@+id/budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget"
+            android:textColor="#2DB84C"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline4"
+            app:layout_constraintTop_toBottomOf="@id/horguideline2" />
+        <TextView
+            android:id="@+id/budgetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="A financial plan to  balance your\n income and expenses"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/budget"
+            app:layout_constraintTop_toBottomOf="@id/budget" />
+        <ImageView
+            android:id="@+id/ivRightArrowBudget"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/right_arrow_green"
+            app:layout_constraintRight_toRightOf="@id/vertguideline2"
+            app:layout_constraintTop_toTopOf="@id/budgetText" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horguideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="222dp" />
 
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/events_green"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline3"
+            app:layout_constraintTop_toBottomOf="@id/horguideline3" />
+
+        <TextView
+            android:id="@+id/events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Events"
+            android:textColor="#2DB84C"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline4"
+            app:layout_constraintTop_toBottomOf="@id/horguideline3" />
+        <TextView
+            android:id="@+id/eventText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Create a event to track on your\n spending during an actual event \n like travelling at weekends"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/events"
+            app:layout_constraintTop_toBottomOf="@id/events" />
+        <ImageView
+            android:id="@+id/ivRightArrowevents"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/right_arrow_green"
+            app:layout_constraintRight_toRightOf="@id/vertguideline2"
+            app:layout_constraintTop_toTopOf="@id/eventText" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horguideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="365dp" />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/bills"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline3"
+            app:layout_constraintTop_toBottomOf="@id/horguideline5" />
+        <TextView
+            android:id="@+id/bills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bills"
+            android:textColor="#2DB84C"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline4"
+            app:layout_constraintTop_toBottomOf="@id/horguideline5" />
+        <TextView
+            android:id="@+id/billsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Monitor your repitetive bills such \n electricity,rent Internet \nsubscription etc "
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/bills"
+            app:layout_constraintTop_toBottomOf="@id/bills" />
+        <ImageView
+            android:id="@+id/ivRightArrowBills"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/right_arrow_green"
+            app:layout_constraintRight_toRightOf="@id/vertguideline2"
+            app:layout_constraintTop_toTopOf="@id/billsText" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horguideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="503dp" />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/recuringtrans"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline3"
+            app:layout_constraintTop_toBottomOf="@id/horguideline4" />
+        <TextView
+            android:id="@+id/recuringTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recurring Transaction"
+            android:textColor="#2DB84C"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/vertguideline4"
+            app:layout_constraintTop_toBottomOf="@id/horguideline4" />
+        <TextView
+            android:id="@+id/recurringTransText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Create recurring transcation that \n will be automatically added\n to future"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/recuringTrans"
+            app:layout_constraintTop_toBottomOf="@id/recuringTrans" />
+        <ImageView
+            android:id="@+id/ivRightArrowRecurring"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/right_arrow_green"
+            app:layout_constraintRight_toRightOf="@id/vertguideline2"
+            app:layout_constraintTop_toTopOf="@id/recurringTransText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
