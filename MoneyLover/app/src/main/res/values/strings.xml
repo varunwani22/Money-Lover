@@ -97,6 +97,7 @@
     <string name="note">Note</string>
 
     <string name="title_select_category">SELECT CATEGORY</string>
+    <string name="title_select_wallet">SELECT WALLET</string>
 
 
 </resources>

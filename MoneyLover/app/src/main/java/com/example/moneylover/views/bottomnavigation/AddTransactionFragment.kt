@@ -109,6 +109,15 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
                 Constants.CATEGORY
             )
         }
+        etSelectWallet.setOnClickListener {
+            customItemsListDialog(
+                resources.getString(R.string.title_select_wallet),
+                Constants.wallets(),
+                Constants.walletsImage(),
+                Constants.WALLET
+            )
+
+        }
 
         ivSelectFromGallery.setOnClickListener {
             val builder = AlertDialog.Builder(
@@ -195,6 +204,11 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
                 etSelectCategory.setText(item)
                 Glide.with(ivCategoryEt.context).load(image).into(ivCategoryEt)
             }
+            Constants.WALLET -> {
+                mCustomListDialog.dismiss()
+                etSelectWallet.setText(item)
+                Glide.with(ivWalletEt.context).load(image).into(ivWalletEt)
+            }
 
         }
     }
@@ -241,7 +255,7 @@ private fun saveImageToInternalStorage(bitmap: Bitmap): String {
     return file.absolutePath
 }
     companion object{
-        private val IMAGE_DIRECTORY="CategoryImage"
+        val IMAGE_DIRECTORY="CategoryImage"
     }
 
 

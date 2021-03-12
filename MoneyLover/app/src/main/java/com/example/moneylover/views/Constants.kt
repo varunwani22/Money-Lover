@@ -4,6 +4,7 @@ import com.example.moneylover.R
 
 object Constants {
     const val CATEGORY: String = "Category"
+    const val WALLET:String="Wallet"
     fun categories(): ArrayList<String> {
         val list = ArrayList<String>()
         list.add("Food & Beverage")
@@ -40,5 +41,23 @@ object Constants {
         list.add(R.drawable.other)
 
         return list
+    }
+    fun wallets():ArrayList<String>{
+        val list=ArrayList<String>()
+        list.add("Cash")
+        list.add("Upi")
+        list.add("Card")
+
+        return list
+
+    }
+    fun walletsImage():ArrayList<Int>{
+        val list=ArrayList<Int>()
+        list.add(R.drawable.ic_purse)
+        list.add(R.drawable.upi)
+        list.add(R.drawable.atm)
+
+        return list
+
     }
 }
