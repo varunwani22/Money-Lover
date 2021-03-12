@@ -77,7 +77,6 @@ class EditTransactionActivity : AppCompatActivity(), OnCategoryClickListener {
                     month,
                     day
                 )
-
             dp.show()
         }
         etSelectEditableCategory.setOnClickListener {
@@ -96,6 +95,14 @@ class EditTransactionActivity : AppCompatActivity(), OnCategoryClickListener {
                 Constants.WALLET
             )
 
+        }
+
+        etSetEditableReminder.setOnClickListener {
+            val time = etSetEditableReminder.text.toString().toInt()
+            val intent = Intent(AlarmClock.ACTION_SET_ALARM)
+            intent.putExtra(AlarmClock.EXTRA_HOUR, time)
+            intent.putExtra(AlarmClock.EXTRA_MINUTES, 0)
+            startActivity(intent)
         }
 
         ivEditableSelectFromGallery.setOnClickListener {
@@ -118,14 +125,6 @@ class EditTransactionActivity : AppCompatActivity(), OnCategoryClickListener {
             builder.setPositiveButton("GO PREMIUM", null)
             val alert: AlertDialog = builder.create()
             alert.show()
-        }
-
-        etSetEditableReminder.setOnClickListener {
-            val time = etSetReminder.text.toString().toInt()
-            val intent = Intent(AlarmClock.ACTION_SET_ALARM)
-            intent.putExtra(AlarmClock.EXTRA_HOUR, time)
-            intent.putExtra(AlarmClock.EXTRA_MINUTES, 0)
-            startActivity(intent)
         }
 
 
@@ -151,6 +150,10 @@ class EditTransactionActivity : AppCompatActivity(), OnCategoryClickListener {
 
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        btnCloseEditTransaction.setOnClickListener {
+            finish()
         }
 
 

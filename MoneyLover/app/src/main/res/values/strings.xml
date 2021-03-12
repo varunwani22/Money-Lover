@@ -99,7 +99,12 @@
     <string name="title_select_category">SELECT CATEGORY</string>
     <string name="write_note">Write Note</string>
     <string name="enter_note">Enter Note</string>
+    <string name="zero">0</string>
+    <string name="saturday">Saturday</string>
+    <string name="doller">$</string>
+
     <string name="title_select_wallet">SELECT WALLET</string>
+
 
 
 </resources>
