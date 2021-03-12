@@ -23,7 +23,6 @@ import com.example.moneylover.R
 import com.example.moneylover.data.localtransaction.TransactionDatabase
 import com.example.moneylover.data.localtransaction.TransactionEntity
 import com.example.moneylover.databinding.DialogCustomListBinding
-import com.example.moneylover.databinding.FragmentAddTransactionBinding
 import com.example.moneylover.repository.TransactionRepository
 import com.example.moneylover.viewmodels.TransactionViewModel
 import com.example.moneylover.viewmodels.TransactionViewModelFactory
@@ -154,7 +153,8 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
             val image = ivCategoryEt.drawable.toBitmap()
             mImagePath = saveImageToInternalStorage(image)
 
-            val transactionEntity = TransactionEntity(amount, category, date, wallet, note, with, mImagePath)
+            val transactionEntity =
+                TransactionEntity(amount, category, date, wallet, note, with, mImagePath)
 
 
             viewModel.addTransaction(transactionEntity)
@@ -199,7 +199,7 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
         }
     }
 
-//        fun selectedListItem(item: String, image: Int, selection: String) {
+    //        fun selectedListItem(item: String, image: Int, selection: String) {
 //
 //            when (selection) {
 //
@@ -210,38 +210,39 @@ class AddTransactionFragment : Fragment(), OnCategoryClickListener {
 //
 //            }
 //        }
-private fun saveImageToInternalStorage(bitmap: Bitmap): String {
+    private fun saveImageToInternalStorage(bitmap: Bitmap): String {
 
 
-    val wrapper = ContextWrapper(context)
+        val wrapper = ContextWrapper(context)
 
 
-    var file = wrapper.getDir(IMAGE_DIRECTORY, Context.MODE_PRIVATE)
+        var file = wrapper.getDir(IMAGE_DIRECTORY, Context.MODE_PRIVATE)
 
-    // Mention a file name to save the image
-    file = File(file, "${UUID.randomUUID()}.jpg")
+        // Mention a file name to save the image
+        file = File(file, "${UUID.randomUUID()}.jpg")
 
-    try {
-        // Get the file output stream
-        val stream: OutputStream = FileOutputStream(file)
+        try {
+            // Get the file output stream
+            val stream: OutputStream = FileOutputStream(file)
 
-        // Compress bitmap
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+            // Compress bitmap
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
 
-        // Flush the stream
-        stream.flush()
+            // Flush the stream
+            stream.flush()
 
-        // Close stream
-        stream.close()
-    } catch (e: IOException) { // Catch the exception
-        e.printStackTrace()
+            // Close stream
+            stream.close()
+        } catch (e: IOException) { // Catch the exception
+            e.printStackTrace()
+        }
+
+        // Return the saved image absolute path
+        return file.absolutePath
     }
 
-    // Return the saved image absolute path
-    return file.absolutePath
-}
-    companion object{
-        private val IMAGE_DIRECTORY="CategoryImage"
+    companion object {
+        private val IMAGE_DIRECTORY = "CategoryImage"
     }
 
 
