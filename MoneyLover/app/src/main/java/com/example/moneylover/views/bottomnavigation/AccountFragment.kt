@@ -75,15 +75,13 @@ class AccountFragment : Fragment() {
             val intent = Intent(activity, SettingsActivity::class.java)
             startActivity(intent)
         }
-
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         llAboutUs.setOnClickListener{
             val intent = Intent (activity,AboutActivity::class.java)
             startActivity(intent)
         }
+
     }
+
+
 
 }

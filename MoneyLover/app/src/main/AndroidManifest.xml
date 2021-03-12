@@ -32,6 +32,8 @@
         <activity android:name=".views.RegisterActivity" />
 
         <activity android:name=".views.SignInActivity" />
+        <activity android:name=".views.AboutActivity"/>
+        <activity android:name=".views.FacebookActivity"/>
     </application>
 
 </manifest>
