@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.report_fragment.ReportFragment">
+    tools:context=".views.event_fragment.FragmentEvent">
 
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/TbTabLayout"
+        android:id="@+id/tbTabLayoutEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabGravity="fill"
@@ -19,11 +19,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPage"
+        android:id="@+id/VpViewPagerEvent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-       app:layout_constraintTop_toBottomOf="@id/TbTabLayout"
+        app:layout_constraintTop_toBottomOf="@id/TbTabLayout"
         tools:layout_editor_absoluteX="0dp" />
 
 
 </LinearLayout>
+
+
+
+
+

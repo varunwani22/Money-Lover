@@ -8,6 +8,16 @@
     <string name="planning">Planning</string>
     <string name="account">Account</string>
     <string name="add">Add</string>
+    <string name="debt">Debt</string>
+    <string name="other">Other</string>
+    <string name="loan">Loan</string>
+    <string name="income">Income</string>
+    <string name="Expense">Expense</string>
+    <string name="net">Net Income</string>
+    <string name="open">Opening balance</string>
+    <string name="end">Ending balance</string>
+    <string name="Income">Income and Expense</string>
+    <string name="Balance">Balance</string>
     <string name="join">Join our beta testing group</string>
     <string name="Help">Help us Translate</string>
     <string name="For">For business partnership</string>
