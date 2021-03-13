@@ -163,13 +163,8 @@
         android:background="@color/light_gray"
         android:id="@+id/transactionRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="367dp" />
-    <ImageView
-        android:id="@+id/ivAdvertise"
-        android:background="@color/light_gray"
-        android:scaleType="fitXY"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp60"/>
+        android:layout_height="417dp" />
+
 
 
 </LinearLayout>

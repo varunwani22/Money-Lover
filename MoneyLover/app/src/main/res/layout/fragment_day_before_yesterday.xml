@@ -49,7 +49,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvBalance" />
 
             <TextView
-                android:id="@+id/tvOpenAmount"
+                android:id="@+id/tvOpenAmountToday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_20"
@@ -84,7 +84,7 @@
                 android:textSize="@dimen/sp_18"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvOpenAmount"
+                app:layout_constraintStart_toEndOf="@+id/tvOpenAmountToday"
                 app:layout_constraintTop_toBottomOf="@+id/tvEnd" />
 
             <View
@@ -93,7 +93,7 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="@dimen/dp_20"
                 android:background="@color/dark_gray"
-                app:layout_constraintTop_toBottomOf="@+id/tvOpenAmount" />
+                app:layout_constraintTop_toBottomOf="@+id/tvOpenAmountToday" />
 
             <TextView
                 android:id="@+id/tvIncomeExpense"
