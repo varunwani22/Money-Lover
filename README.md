@@ -48,15 +48,20 @@ Implimentations of gradles in project
     testImplementation "com.squareup.okhttp3:mockwebserver:3.6.0"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+//Glide 
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
     androidTestImplementation 'com.android.support.test:runner:1.0.0'
     androidTestCompile "android.arch.core:core-testing:1.1.0"
     testImplementation 'org.robolectric:robolectric:4.0'
+
+//Firebase
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.facebook.android:facebook-login:8.1.0'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
 
+//Library for dimen
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
