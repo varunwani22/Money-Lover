@@ -1,4 +1,23 @@
-# Money-Lover
+<h1>Money Lover (Clone of money manager app)</h1>
+<p>Thhis application allow user to manage their expenses, spendings and earning in well organized manner.</p>
+<hr>
+<h3>Used Technologies</h3>
+<ul>
+  <li>Java</li>
+  <li>Kotlin</li>
+  <li>Room Database</li>
+  <li>Firebase</li>
+  <li>Recycler View</li>
+</ul>  
+<hr>
+<h3>Features</h3>
+<p>This app help user to manage expenses and earning so that user can keep record of important thigs. App have categories like food, cafe, hospital, cab, bill, etc. So that user can keep recording by selecting one of them, the date and time. User can take part in events and can set reminder of that perticular event. There are graph like structure where user get record of his/her expenses by date.</p>
+<hr>
+<h3>Screenshort and description</h3>
+<img src="https://drive.google.com/file/d/14hz9O929bvYx4UF7S7OG1tkC0Q2bMBXR/view?usp=sharing" width="500" height="333">
+<img src="https://miro.medium.com/max/700/1*NMD1jMjrC4CygqQxzrbtFQ.jpeg" width="500" height="333">
+<p>Here are screenshorts of some activities, </p>
+<hr>
 
 
 Implimentations of gradles in project
