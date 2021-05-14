@@ -14,13 +14,11 @@
 <p>This app help user to manage expenses and earning so that user can keep record of important thigs. App have categories like food, cafe, hospital, cab, bill, etc. So that user can keep recording by selecting one of them, the date and time. User can take part in events and can set reminder of that perticular event. There are graph like structure where user get record of his/her expenses by date.</p>
 <hr>
 <h3>Screenshort and description</h3>
-<img src="https://drive.google.com/file/d/14hz9O929bvYx4UF7S7OG1tkC0Q2bMBXR/view?usp=sharing" width="500" height="333">
-<img src="https://miro.medium.com/max/700/1*NMD1jMjrC4CygqQxzrbtFQ.jpeg" width="500" height="333">
-<p>Here are screenshorts of some activities, </p>
+<img src="./WhatsApp Image 2021-03-21 at 10.55.00 AM (3).jpeg" width="500" height="333">
+<p>Here are screenshorts of some activities, add transaction- where user can add transaction to app. added transaction is shown is transaction page,and daywise report of added transaction.</p>
 <hr>
 
-
-Implimentations of gradles in project
+<h3>Implimentations of Dependencies in project</h3>
 
  implementation 'com.google.android.material:material:1.2.1'
 
